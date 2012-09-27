@@ -1,0 +1,8 @@
+<footer>
+<p>I am the footer</p>
+  <ul>
+    <li><%= link_to 'About', pages_about_path %></li>
+    <li><%= link_to 'Contact', pages_contact_path %></li>
+    <li><%= link_to 'Photography', root_path %></li>
+  </ul>
+</footer>
