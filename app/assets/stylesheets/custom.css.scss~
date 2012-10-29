@@ -1,3 +1,32 @@
+@import "bootstrap";
+
+
+/* general */
+
+body {
+  padding: 10px;
+}
+
+/* header */
+
+h3 {
+   text-align: center;
+}
+
+
+/* footer */
+
 footer {
-  border: 1px dashed gray;
+  clear: both;
+  padding: 20px;
+  margin: 20px 5px 20px 5px;
+  ul {
+    float: right;
+    list-style: none;
+  }
+  ul li {
+    float: left;
+    padding: 20px;
+    margin-bottom: 60px;
+  }
 }

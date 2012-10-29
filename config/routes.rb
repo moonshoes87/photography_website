@@ -5,6 +5,8 @@ PhotographyWebsite::Application.routes.draw do
 
   get "pages/contact"
 
+  get "pages/entry"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -54,7 +56,7 @@ PhotographyWebsite::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'pages#home'
+   root :to => 'pages#entry'
 
   # See how all your routes lay out with "rake routes"
 
