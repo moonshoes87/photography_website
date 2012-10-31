@@ -1,4 +1,4 @@
-@import "bootstrap";
+
 
 
 /* general */
@@ -25,23 +25,23 @@ footer {
   clear: both;
   padding: 20px;
   margin: 20px 5px 20px 5px;
-  ul {
+} 
+footer ul {
     float: right;
     list-style: none;
-  }
-  ul li {
+}
+footer ul li {
     float: left;
     padding: 20px;
     margin-bottom: 60px;
-  }
 }
 
 
 /* entry page */
 
 #portal  {
-  border: 1px gray solid;
-  width: 200px;
-  margin: 0 auto;
-  text-align: center;
+  color: red;
+  width: 25px; 
+  margin: 0 auto; 
+  text-align: center; 
 }

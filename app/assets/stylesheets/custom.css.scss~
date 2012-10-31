@@ -3,15 +3,20 @@
 
 /* general */
 
+p {
+  color: blue;
+}
+
 body {
   padding: 10px;
 }
 
 /* header */
 
-h3 {
+header h3 {
    text-align: center;
 }
+
 
 
 /* footer */
@@ -29,4 +34,14 @@ footer {
     padding: 20px;
     margin-bottom: 60px;
   }
+}
+
+
+/* entry page */
+
+#portal  {
+  border: 1px gray solid;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
 }
