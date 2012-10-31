@@ -1,0 +1,11 @@
+<%= render 'layouts/header' %>
+<h1>Photo#index</h1>
+<p>Find me in app/views/photo/index.html.erb</p>
+<% @photos.each do |photo| %>
+  <div class = "photo_container">
+    <div id ="<%= photo.title %>">Title: <%= photo.title %></div>
+    <div class = "image"><%= image_tag("#{photo.url}") %></div>
+  </div>
+  <br />
+<% end %>
+<%= render 'layouts/footer' %>

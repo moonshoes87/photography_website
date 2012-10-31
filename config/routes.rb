@@ -1,4 +1,28 @@
 PhotographyWebsite::Application.routes.draw do
+  get "tag/index"
+
+  get "tag/new"
+
+  get "tag/edit"
+
+  get "tag/show"
+
+  get "tag/update"
+
+  get "tag/destroy"
+
+  get "photo/index"
+
+  get "photo/new"
+
+  get "photo/edit"
+
+  get "photo/show"
+
+  get "photo/update"
+
+  get "photo/destroy"
+
   get "pages/home"
 
   get "pages/about"

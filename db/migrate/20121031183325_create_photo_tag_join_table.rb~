@@ -1,0 +1,7 @@
+class CreatePhotoTagJoinTable < ActiveRecord::Migration
+  def up
+  end
+
+  def down
+  end
+end

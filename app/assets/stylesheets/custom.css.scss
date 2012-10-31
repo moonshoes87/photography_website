@@ -45,3 +45,16 @@ footer ul li {
   margin: 0 auto; 
   text-align: center; 
 }
+
+/* photos */
+.image img{
+  height: 250px;
+  width: auto;
+  border: 1px solid black;
+  margin: 0 auto;
+  display: block;
+}
+
+.photo_container {
+  width: auto;
+}
