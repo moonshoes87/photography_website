@@ -7,6 +7,10 @@ p {
   color: blue;
 }
 
+.center {
+  text-align: center;
+}
+
 body {
   padding: 10px;
 }
@@ -17,7 +21,9 @@ header h3 {
    text-align: center;
 }
 
-
+.clear {
+  clear: both;
+}
 
 /* footer */
 
@@ -53,8 +59,38 @@ footer ul li {
   border: 1px solid black;
   margin: 0 auto;
   display: block;
+ }
+.main img{
+    height: 650px;
+    -webkit-box-shadow: 5px 5px 10px #000;
+    -moz-box-shadow: 5px 5px 10px #000;
+    box-shadow: 5px 5px 10px #000;
 }
 
-.photo_container {
-  width: auto;
+.sorted {
+  width: 300px;
+  height: auto;
+  float: left;
+  margin: 20px;
+}
+
+.description {
+  border: 1px solid purple;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  position: static;
+}
+
+
+.group:before,
+.group:after {
+  content: "";
+display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1; /* IE6&7 */
 }

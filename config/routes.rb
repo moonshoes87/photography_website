@@ -1,27 +1,13 @@
 PhotographyWebsite::Application.routes.draw do
-  get "tag/index"
 
-  get "tag/new"
+  devise_for :users, :skip => :registrations
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  get "tag/edit"
-
-  get "tag/show"
-
-  get "tag/update"
-
-  get "tag/destroy"
-
+  get "photo/sorted"  
+ 
   get "photo/index"
 
-  get "photo/new"
-
-  get "photo/edit"
-
   get "photo/show"
-
-  get "photo/update"
-
-  get "photo/destroy"
 
   get "pages/home"
 

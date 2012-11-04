@@ -51,3 +51,5 @@ end
 # gem 'debugger'
 
 gem 'rails_admin'
+
+gem "devise"

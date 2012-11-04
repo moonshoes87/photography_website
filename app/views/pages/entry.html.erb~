@@ -1,6 +1,6 @@
 <h1 id = "portal">Welcome to Erik's awesome website</h1>
 <p>Replace oxalis picture with some simple image</p>
 <p>Center image</p>
-<div>x
+<div>
 <%= link_to(image_tag("oxalis_field.jpg"), {controller: "pages", action: "home"}, id: "none") %> 
 </div>

@@ -1,4 +1,8 @@
 class PagesController < ApplicationController
+
+  layout "first_page", :only => :entry
+  #layout "application", :except => :entry
+
   def home
   end
 

@@ -1,4 +1,10 @@
 class PhotoController < ApplicationController
+
+  def sorted
+  @photos = Photo.all
+  @tag = Tag.find(params[:id])
+  end
+
   def index
   @photos = Photo.all
 

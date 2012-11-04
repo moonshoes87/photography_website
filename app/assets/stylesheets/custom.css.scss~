@@ -7,6 +7,10 @@ p {
   color: blue;
 }
 
+.center {
+  text-align: center;
+}
+
 body {
   padding: 10px;
 }
@@ -51,4 +55,19 @@ footer ul li {
   height: 250px;
   width: auto;
   border: 1px solid black;
+  margin: 0 auto;
+  display: block;
+ }
+.main img{
+    height: 650px;
+    -webkit-box-shadow: 5px 5px 10px #000;
+    -moz-box-shadow: 5px 5px 10px #000;
+    box-shadow: 5px 5px 10px #000;
+}
+
+.sorted {
+  width: 300px;
+  height: auto;
+  float: left;
+  margin: 20px;
 }

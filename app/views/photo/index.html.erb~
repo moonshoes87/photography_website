@@ -1,2 +1,20 @@
+<%= render 'layouts/header' %>
 <h1>Photo#index</h1>
 <p>Find me in app/views/photo/index.html.erb</p>
+<% @photos.each do |photo| %>
+  <div>
+    <div class = "title" id ="<%= photo.title %>">Title: <%= photo.title %></div>
+    <div class = "description">About this photo: <%= photo.description %></div>
+    <div class ="image"><%= link_to(image_tag("#{photo.url}"), controller: "photo", action: "show", id: "#{photo.id}") %></div>
+  </div>
+  <br />
+<% end %>
+
+<h3 class = "center">These are the weird photos!</h3>
+<% Tag.last.photos.each do |p| %>
+  <div>
+     <div class = "image sorted"><%= image_tag("#{p.url}")%></div>
+  </div>
+
+<% end %>
+<%= render 'layouts/footer' %>
