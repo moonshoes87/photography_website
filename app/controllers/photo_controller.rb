@@ -6,8 +6,7 @@ class PhotoController < ApplicationController
   end
 
   def index
-  @photos = Photo.all
-
+  @photos = Photo.all rescue []
   end
 
   def new
