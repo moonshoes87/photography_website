@@ -21,7 +21,9 @@ header h3 {
    text-align: center;
 }
 
-
+.clear {
+  clear: both;
+}
 
 /* footer */
 
@@ -70,4 +72,25 @@ footer ul li {
   height: auto;
   float: left;
   margin: 20px;
+}
+
+.description {
+  border: 1px solid purple;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  position: static;
+}
+
+
+.group:before,
+.group:after {
+  content: "";
+display: table;
+}
+.group:after {
+  clear: both;
+}
+.group {
+  zoom: 1; /* IE6&7 */
 }

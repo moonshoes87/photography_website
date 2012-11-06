@@ -2,3 +2,17 @@
 <h1>Contact me</h1>
 <p>Find me in app/views/pages/contact.html.erb</p>
 
+<section>
+  <ul class="thumbnails">
+    <% @photos.each do |p| %>
+    <li class="crop"><%= image_tag(p.url) %></li>
+    <% end %>
+  </ul>
+</section>
+<section>
+  <ul class="thumbnails">
+    <% @photos.each do |p| %>
+    <li class="span4"><%= image_tag(p.url, class: "crop portrait") %></li>
+    <% end %>
+  </ul>
+</section>

@@ -1,4 +1,4 @@
-<%= render 'layouts/header' %>
+
 <h1>Photo#index</h1>
 <p>Find me in app/views/photo/index.html.erb</p>
 <% @photos.each do |photo| %>
@@ -17,4 +17,3 @@
   </div>
 
 <% end %>
-<%= render 'layouts/footer' %>

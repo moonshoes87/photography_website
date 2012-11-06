@@ -67,12 +67,17 @@ footer ul li {
     box-shadow: 5px 5px 10px #000;
 }
 
-.sorted {
-  width: 300px;
+.crop {
   height: auto;
+  width: 100px;
   float: left;
   margin: 20px;
 }
+
+.portrait {
+  height: 100px;
+  width: auto;
+} 
 
 .description {
   border: 1px solid purple;

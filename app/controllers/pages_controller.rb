@@ -7,9 +7,11 @@ class PagesController < ApplicationController
   end
 
   def about
+  @photos = Photo.all
   end
 
   def contact
+  @photos = Photo.all
   end
 
   def entry
