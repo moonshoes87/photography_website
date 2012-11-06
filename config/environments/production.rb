@@ -49,7 +49,9 @@ PhotographyWebsite::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-  # config.assets.precompile += %w( search.js )
+   config.assets.precompile += ['rails_admin/rails_admin.css', 'rails_admin/rails_admin.js']
+   # LORI changed this so that rails admin will work
+
 
   # Disable delivery errors, bad email addresses will be ignored
   # config.action_mailer.raise_delivery_errors = false
