@@ -5,10 +5,15 @@
 <section>
   <ul class="thumbnails">
     <% @photos.each do |p| %>
-    <li class="crop"><%= image_tag(p.url) %></li>
-    <% end %>
+      <% if p.image_type == "portrait" %>
+        <li><%= image_tag(p.url, class: "crop portrait center") %></li>
+        <% else %>
+        <li><%= image_tag(p.url, class: "crop") %></li>
+	<% end %>
+      <% end %>
   </ul>
 </section>
+<br />
 <section>
   <ul class="thumbnails">
     <% @photos.each do |p| %>
