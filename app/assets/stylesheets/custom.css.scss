@@ -46,8 +46,8 @@ footer ul li {
 /* entry page */
 
 #portal  {
-  color: red;
-  width: 25px; 
+  color: blue;
+  width: 550px; 
   margin: 0 auto; 
   text-align: center; 
 }
@@ -70,12 +70,25 @@ footer ul li {
 .crop {
   height: auto;
   width: 100px;
-  float: left;
-  margin: 20px;
+  margin: 27px auto;
+  display: block;  
+}
+
+
+.slideshow {
+  width: 300px;
+}
+
+.contain {
+  width: 140px;
+  height: 140px;
+  background: gray;
+ /* display: inline; */
+
 }
 
 .portrait {
-  height: 85px;
+  height: 80px;
   width: auto;
 } 
 
@@ -87,3 +100,33 @@ footer ul li {
   position: static;
 }
 
+
+
+/* testing */
+
+.border {
+  border: 1px solid black;
+  
+}
+
+
+
+/* slideshow */
+
+#slideshow {
+  margin: 50px auto;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+#slideshow > div {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  /* perhaps add sizing in */
+}

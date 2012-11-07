@@ -70,12 +70,20 @@ footer ul li {
 .crop {
   height: auto;
   width: 100px;
-  float: left;
-  margin: 20px;
+  margin: 27px auto;
+  display: block;  
+}
+
+.contain {
+  width: 140px;
+  height: 140px;
+  background: gray;
+ /* display: inline; */
+
 }
 
 .portrait {
-  height: 100px;
+  height: 80px;
   width: auto;
 } 
 
@@ -87,3 +95,11 @@ footer ul li {
   position: static;
 }
 
+
+
+/* testing */
+
+.border {
+  border: 1px solid black;
+  
+}

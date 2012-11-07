@@ -6,9 +6,9 @@
   <ul class="thumbnails">
     <% @photos.each do |p| %>
       <% if p.image_type == "portrait" %>
-        <li><%= image_tag(p.url, class: "crop portrait center") %></li>
+        <li class="contain"><%= image_tag(p.url, class: "crop portrait center") %></li>
         <% else %>
-        <li><%= image_tag(p.url, class: "crop") %></li>
+        <li class="contain center"><%= image_tag(p.url, class: "crop center") %></li>
 	<% end %>
       <% end %>
   </ul>
