@@ -2,10 +2,10 @@
 <p>Find me in app/views/photo/show.html.erb</p>
 <div>
   <title><%= @photo.title %></title>
-  <div class="group">
+  <div>
     <div class="image main"><%= image_tag "#{@photo.url}" %></div>
     <span class="description"><%= @photo.description %></span>
   </div>
-   <p class="clear"><%= link_to "Back", photo_index_path %></p>
-   <p class="clear">You will need to fix the Back, so it goes to where the user actually was.  Also, please make the css nice.</p>
+   <p><%= link_to "Back", photo_index_path %></p>
+   <p>You will need to fix the Back, so it goes to where the user actually was.  Also, please make the css nice.</p>
 </div>

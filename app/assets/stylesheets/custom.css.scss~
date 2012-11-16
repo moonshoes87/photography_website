@@ -46,8 +46,8 @@ footer ul li {
 /* entry page */
 
 #portal  {
-  color: red;
-  width: 25px; 
+  color: blue;
+  width: 550px; 
   margin: 0 auto; 
   text-align: center; 
 }
@@ -72,6 +72,13 @@ footer ul li {
   width: 100px;
   margin: 27px auto;
   display: block;  
+}
+
+
+.slideshow {
+  height: 350px;
+  width: 500px;
+  overflow: hidden;
 }
 
 .contain {
@@ -102,4 +109,26 @@ footer ul li {
 .border {
   border: 1px solid black;
   
+}
+
+
+
+/* slideshow */
+
+#slideshow {
+  margin: 50px auto;
+  position: relative;
+  width: 600px;
+  height: 400px;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+#slideshow > div {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  /* perhaps add sizing in */
 }
