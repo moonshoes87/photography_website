@@ -5,7 +5,8 @@
 <div id="slideshow">
   <% @photos.each do |p| %>
   <div>
-    <%= image_tag(p.url, class: "crop slideshow") %>
+    <%= link_to(image_tag(p.url), { controller: "photo", action: "show", id: "#{p.id}" }, class: "crop slideshow") %>
   </div>
   <% end %>
 </div>
+

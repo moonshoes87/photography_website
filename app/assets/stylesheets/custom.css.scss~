@@ -4,7 +4,7 @@
 /* general */
 
 p {
-  color: blue;
+  color: black;
 }
 
 .center {
@@ -13,6 +13,7 @@ p {
 
 body {
   padding: 10px;
+  background: #FFFFF0 !important
 }
 
 /* header */
@@ -46,10 +47,23 @@ footer ul li {
 /* entry page */
 
 #portal  {
-  color: blue;
+  color: gray;
   width: 550px; 
   margin: 0 auto; 
   text-align: center; 
+}
+
+#enter img {
+  display: none;
+    left: 150px;
+    position: relative;
+    img:hover {
+      opacity: 0.6;
+  }
+}
+
+#enter img:hover {
+  opacity: 0.8;
 }
 
 /* photos */
@@ -60,11 +74,24 @@ footer ul li {
   margin: 0 auto;
   display: block;
  }
+
+.main {
+  height: 750px;
+  width: 1200;
+  position: relative;
+}
+
 .main img{
     height: 650px;
+    width: 900px;
+    margin: auto;
     -webkit-box-shadow: 5px 5px 10px #000;
     -moz-box-shadow: 5px 5px 10px #000;
     box-shadow: 5px 5px 10px #000;
+}
+
+.index {
+  display: none
 }
 
 .crop {
@@ -95,11 +122,11 @@ footer ul li {
 } 
 
 .description {
-  border: 1px solid purple;
   padding: 10px;
-  margin: 10px;
+  margin: 10px 10px 30px 10px;
   text-align: center;
   position: static;
+  display: block;
 }
 
 

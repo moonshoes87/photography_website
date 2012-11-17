@@ -2,5 +2,5 @@
 <p>Replace oxalis picture with some simple image</p>
 <p>Center image</p>
 <div class = "image main">
-<%= link_to(image_tag("oxalis_field.jpg"), {controller: "pages", action: "home"}, id: "none") %> 
+<%= link_to(image_tag("oxalis_field.jpg"), {controller: "pages", action: "home"}, id: "enter") %> 
 </div>

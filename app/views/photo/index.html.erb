@@ -4,7 +4,7 @@
 <% @photos.each do |photo| %>
   <div>
     <div class = "title" id ="<%= photo.title %>">Title: <%= photo.title %></div>
-    <div class ="image"><%= link_to(image_tag("#{photo.url}"), controller: "photo", action: "show", id: "#{photo.id}") %></div>
+    <div class ="image index"><%= link_to(image_tag("#{photo.url}"), controller: "photo", action: "show", id: "#{photo.id}") %></div>
     <div class = "description">About this photo: <%= photo.description %></div>
   </div>
   <br />
@@ -13,7 +13,7 @@
 <h3 class = "center">These are the weird photos!</h3>
 <% Tag.last.photos.each do |p| %>
   <div>
-     <div class = "image crop"><%= image_tag("#{p.url}")%></div>
+     <div class = "image"><%= image_tag("#{p.url}")%></div>
   </div>
 
 <% end %>
