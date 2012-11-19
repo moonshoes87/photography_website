@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   #layout "application", :except => :entry
 
   def home
+  @photos = Photo.all
   end
 
   def about

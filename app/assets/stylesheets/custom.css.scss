@@ -84,6 +84,39 @@ footer ul li {
     min-height:50%;
 }
 
+.holder {
+  z-index: 2;
+  position: relative;
+  height: 500px;
+  width: 200px;
+  margin-left: 10px;
+  margin-top: 10px;
+  background: black;
+  color: gray;
+  background: rgba(0, 0, 0, 0.76)
+/* auto auto auto 10px; */
+/* make this shit opaque-ish
+  opacity: .9; also, fix so that it is spaced nicely from the top (10% won't always work : ( ) */
+}
+
+.navigation {
+  position: relative;
+  height: 450px;
+  width: 150px;
+  top: 25px;
+  left: 25px;
+}
+
+.nav li {
+  font-size: 1.5em;
+  padding-bottom: 50px;
+}
+
+.nav:first-child {
+  padding-top: 20px;
+}
+
+
 
 
 /* photos */
