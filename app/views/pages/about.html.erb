@@ -1,4 +1,6 @@
 <div id="bg">
-  <%= image_tag "oxalis_field.jpg" %>
+  <% @photos.each do |photo| %>
+    <%= image_tag photo.url %>
+  <% end %>
 </div>
 

@@ -1,4 +1,9 @@
+// you will need to make the background stuff not be "I am the header" and all
+
+
 $(document).ready(function(){
+	//hides all the other images
+	$("div#bg > img:gt(0)").hide();
 	// make navbar invisible  
 	$("div#bg img").click(function(){
 		start_slideshow();
@@ -12,7 +17,14 @@ $(document).ready(function(){
 
 
 function start_slideshow(){
-
+    setInterval(function(){
+	    $("div#bg img:first")
+		.fadeOut(1000)
+		.next()
+		.fadeIn(1000)
+		.end()
+		.appendTo("#bg");
+	}, 3000);
 }
 
 function enter_navbar(){
