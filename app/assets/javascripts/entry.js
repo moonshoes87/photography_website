@@ -4,7 +4,7 @@ $(document).ready(function(){
 	$("#enter img").bind({
 		mouseenter: function(){
 		    //add a stop other effects
-		    $(this).stop().animate({opacity: 0.8}, 400);
+		    $(this).stop().animate({opacity: 0.8}, 100);
 		},
 		    mouseleave: function(){
 		    //add in stop

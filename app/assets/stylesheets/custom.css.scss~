@@ -57,14 +57,12 @@ footer ul li {
   display: none;
     left: 150px;
     position: relative;
-    img:hover {
-      opacity: 0.6;
-  }
 }
 
-#enter img:hover {
+/* #enter img:hover {
   opacity: 0.8;
 }
+*/
 
 /* photos */
 .image img{
