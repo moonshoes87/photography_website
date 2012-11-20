@@ -88,7 +88,7 @@ footer ul li {
 /* navigation */
 
 .contains {
-  position: relative;
+  position: absolute;
   width: 940px;
   height: 819px;
   padding: 0 150px;
@@ -118,7 +118,7 @@ footer ul li {
 }
 
 .holder {
- /* display: none; */
+  display: "";
   z-index: 2;
   position: relative;
 /* how it was for the about page */
@@ -156,10 +156,18 @@ footer ul li {
 
 /* slider display area */
 
+#display {
+  width: 600px;
+  height: 300px;
+  border: 1px solid white;
+  float: right;
+}
+
 div#slider {
   width: 600px;
   height: 300px;
-  overflow: hidden;	
+  overflow: hidden;
+  float: right;	
 }
 
 ul#thumbnails {
