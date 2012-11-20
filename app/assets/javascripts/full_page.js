@@ -17,6 +17,7 @@ $(document).ready(function(){
 
 
 function start_slideshow(){
+    $("div#bg img").fadeOut(3000);
     setInterval(function(){
 	    $("div#bg img:first")
 		.fadeOut(1000)
@@ -28,5 +29,8 @@ function start_slideshow(){
 }
 
 function enter_navbar(){
+    $(".holder").fadeIn(500, function(){
+	    return true;
+	});
     //make it show, and slideUp()
 }

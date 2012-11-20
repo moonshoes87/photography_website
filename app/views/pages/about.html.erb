@@ -1,13 +1,12 @@
 
 <div class="holder border">
   <div class="navigation border">
-      <ul class="nav">
-        <li>Comissions</li>
-	<li>Profile</li>
-	<li>Photographs</li>
-	<li>Contact</li>
-      </ul>
-    </div>
+    <ul class="nav">
+      <li><%= link_to "Comissions", '#' %></li>
+      <li><%= link_to "Profile", pages_about_path %></li>
+      <li><%= link_to "Photographs", photo_index_path %></li>
+      <li><%= link_to "Contact", pages_contact_path %></li>
+    </ul>
   </div>
 </div>
 

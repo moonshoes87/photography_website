@@ -13,7 +13,7 @@
 <h3 class = "center">These are the weird photos!</h3>
 <% Tag.last.photos.each do |p| %>
   <div>
-     <div class = "image crop"><%= image_tag("#{p.url}")%></div>
+     <div class = "image"><%= image_tag("#{p.url}")%></div>
   </div>
 
 <% end %>
