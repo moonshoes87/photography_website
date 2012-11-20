@@ -30,7 +30,28 @@ function start_slideshow(){
 
 function enter_navbar(){
     $(".holder").fadeIn(500, function(){
-	    return true;
-	});
+	    var $photographs = $(".holder .navigation .nav li:eq(2)");
+	   $photographs.click(function(e){
+		    e.preventDefault();
+		    $(".dropdown").toggle();
+		});
+	    $photographs.hover(function(){
+		    $(".dropdown").show();
+		},
+		function(){
+		    $(".dropdown").hide();
+		    //    $(".dropdown").delay().fadeOut();
+		});
+	    $(".dropdown").hover(function(){
+		    $(this).show();
+		},
+		function(){ 
+		    $(this).hide();
+		});
+	})
+	}
+	       
+       
+
+    //   $(".holder .navigation .nav li:eq(2)").click( show the drop down menu )
     //make it show, and slideUp()
-}
