@@ -87,7 +87,7 @@ footer ul li {
 
 /* navigation */
 
-.contain {
+.contains {
   position: relative;
   width: 940px;
   height: 819px;
@@ -98,7 +98,6 @@ footer ul li {
   display: none;
   position: relative;
   top: -365px;
-/*  left: 80px; */
   left: 60px;
   height: 300px;
   width: 200px;
@@ -113,21 +112,24 @@ footer ul li {
   width: 150px;
 }
 
+.dropdown li {
+
+/* add some styling */
+}
+
 .holder {
-  display: none;
+ /* display: none; */
   z-index: 2;
   position: relative;
+/* how it was for the about page */
   left: -130px;
   height: 500px;
-  width: 200px;
+  width: 200px; 
   margin-left: 10px;
   margin-top: 15px;
   background: black;
   color: gray;
   background: rgba(0, 0, 0, 0.76)
-/* auto auto auto 10px; */
-/* make this shit opaque-ish
-  opacity: .9; also, fix so that it is spaced nicely from the top (10% won't always work : ( ) */
 }
 
 .navigation {

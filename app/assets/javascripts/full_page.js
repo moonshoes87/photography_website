@@ -2,12 +2,15 @@
 
 
 $(document).ready(function(){
+	// MAKE IT SO IT HIDES THE NAV BAR!!!!!!
+	$(".holder").hide();
 	//hides all the other images
 	$("div#bg > img:gt(0)").hide();
 	// make navbar invisible  
 	$("div#bg img").click(function(){
 		start_slideshow();
 		enter_navbar();
+		//use_navbar();
 		$('div#bg img').unbind('click');
 	    });
 
@@ -30,28 +33,33 @@ function start_slideshow(){
 
 function enter_navbar(){
     $(".holder").fadeIn(500, function(){
-	    var $photographs = $(".holder .navigation .nav li:eq(2)");
-	   $photographs.click(function(e){
-		    e.preventDefault();
-		    $(".dropdown").toggle();
-		});
-	    $photographs.hover(function(){
-		    $(".dropdown").show();
-		},
-		function(){
-		    $(".dropdown").hide();
-		    //    $(".dropdown").delay().fadeOut();
-		});
-	    $(".dropdown").hover(function(){
-		    $(this).show();
-		},
-		function(){ 
-		    $(this).hide();
-		});
-	})
-	}
+	    return true;
+	});
+}
+    
+/*
+function use_navbar(){
+    var $photographs = $(".holder .navigation .nav li:eq(2)");
+    $photographs.click(function(e){
+	    e.preventDefault();
+	    $(".dropdown").toggle();
+	});
+    $photographs.hover(function(){
+	    $(".dropdown").show();
+	},
+	function(){
+	    $(".dropdown").hide();
+	    //    $(".dropdown").delay().fadeOut();
+	});
+    $(".dropdown").hover(function(){
+	    $(this).show();
+	},
+	function(){ 
+	    $(this).hide();
+	});
+}
 	       
        
-
+*/
     //   $(".holder .navigation .nav li:eq(2)").click( show the drop down menu )
     //make it show, and slideUp()
