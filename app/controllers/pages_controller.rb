@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  layout "first_page", :only => :entry
+#  layout "first_page", :only => :entry
 
   def home
   @photos = Photo.all

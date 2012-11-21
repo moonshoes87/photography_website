@@ -1,7 +1,5 @@
 $(document).ready(function(){
-	//UNCOMMENT OUT THE TEXT BELOW, ONCE YOU GET THE JAVASCRIPTS ALL SORTED
 	$(".holder").hide();
-	//hides all the other images
 	$("div#bg > img:gt(0)").hide();
 	$("div#bg img").click(function(){
 		start_slideshow();

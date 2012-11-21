@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 
 function use_navbar(){
-    var $photographs = $(".holder .navigation .nav li:eq(2)");
+    var $photographs = $(".holder .navigation .nav li#photographs");
     $photographs.click(function(e){
             e.preventDefault();
             $(".dropdown").toggle();

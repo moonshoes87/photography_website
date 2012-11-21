@@ -18,8 +18,6 @@
 <% end %>
 -->
 
-<br />
-
 <h3 class="center"> Trying for a new display style </h3>
 
 <div class="container">
@@ -28,7 +26,7 @@
   <div id="slider">
     <ul id="thumbnails">
       <% @photos.each do |p| %>
-      <li class="nail"><%= image_tag "#{p.url}", class: "thumb crop" %></li>
+      <li class="nail"><%= image_tag "#{p.url}", class: "thumb crop portrait" %></li>
       <% end %>
     </ul>
   </div>
