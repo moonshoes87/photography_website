@@ -1,36 +1,15 @@
-$(document).ready(function(){
-	entry_page_effects();
-	show_page_effects();
-	$("#enter img").bind({
-		mouseenter: function(){
-		    //add a stop other effects
-		    $(this).stop().animate({opacity: 0.8}, 100);
-		},
-		    mouseleave: function(){
-		    //add in stop
-		    $(this).stop().animate({opacity: 1.0}, 700);
-			}
-	    })
-	//	$("#enter img").bind(mouseenter, ($(this).animate({opacity: 0.8}, 2000))
-	//	      $(this).animate({opacity: 1.0}, 1000)
-	//	      )  bind opacity on with mouseenter, and opacity normal with mouseleave
-	    })
-
-
-    function hover_photo(){
-     $("#enter img").animate({opacity: 0.5}, 2000);
-    }
-
-function entry_page_effects(){
-    $("a#enter img").fadeIn(1000);
-    $("a#enter img").click(function(event){
-	    event.preventDefault();
-	    $("a#enter img").fadeOut(1000, function(){
-		    document.location.href = '/pages/home';
-		})
-		})
-	}
-
-function show_page_effects(){
-    $("div.image").slideDown(1500, 'swing');
-}
+// This is a manifest file that'll be compiled into application.js, which will include all the files
+// listed below.
+//
+// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
+// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
+//
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// the compiled file.
+//
+// WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
+// GO AFTER THE REQUIRES BELOW.
+//
+//= require jquery
+//= require jquery_ujs
+//= require_tree '.'
