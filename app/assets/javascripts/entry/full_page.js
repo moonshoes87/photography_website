@@ -22,7 +22,7 @@ function start_slideshow(){
 }
 
 function enter_navbar(){
-    $(".holder").fadeIn(500, function(){
+    $(".holder").fadeIn(1000, function(){
 	    return true;
 	});
 }
