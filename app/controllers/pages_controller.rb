@@ -19,4 +19,8 @@ class PagesController < ApplicationController
   @photos = Photo.all
   end
 
+  def comissions
+  @photos = Photo.all
+  end
+
 end
