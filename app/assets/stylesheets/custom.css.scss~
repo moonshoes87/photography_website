@@ -4,7 +4,7 @@
 /* general */
 
 p {
-  color: black;
+  color: gray;
 }
 
 .center {
@@ -85,20 +85,51 @@ footer ul li {
     min-height:50%;
 }
 
-.holder {
+/* navigation */
+
+.contains {
+  position: absolute;
+  width: 940px;
+  height: 819px;
+  padding: 0 150px;
+}
+
+.dropdown {
   display: none;
+  position: relative;
+  top: -365px;
+  left: 60px;
+  height: 300px;
+  width: 200px;
+  z-index: 2;
+  background: black;
+  color: gray;
+  background: rgba(0, 0, 0, 0.76); 
+}
+  
+.dropdown .navigation {
+  height: 250px;
+  width: 150px;
+}
+
+.dropdown li {
+
+/* add some styling */
+}
+
+.holder {
+  display: "";
   z-index: 2;
   position: relative;
+/* how it was for the about page */
+  left: -130px;
   height: 500px;
-  width: 200px;
+  width: 200px; 
   margin-left: 10px;
-  margin-top: 10px;
+  margin-top: 15px;
   background: black;
   color: gray;
   background: rgba(0, 0, 0, 0.76)
-/* auto auto auto 10px; */
-/* make this shit opaque-ish
-  opacity: .9; also, fix so that it is spaced nicely from the top (10% won't always work : ( ) */
 }
 
 .navigation {
@@ -112,6 +143,7 @@ footer ul li {
 .nav li {
   font-size: 1.5em;
   padding-bottom: 50px;
+
 }
 
 .nav:first-child {
@@ -119,12 +151,23 @@ footer ul li {
 }
 
 
+
+
+
 /* slider display area */
+
+#display {
+  width: 600px;
+  height: 300px;
+  border: 1px solid white;
+  float: right;
+}
 
 div#slider {
   width: 600px;
   height: 300px;
-  overflow: hidden;	
+  overflow: hidden;
+  float: right;	
 }
 
 ul#thumbnails {

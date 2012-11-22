@@ -4,7 +4,7 @@
 /* general */
 
 p {
-  color: black;
+  color: gray;
 }
 
 .center {
@@ -94,11 +94,11 @@ footer ul li {
   padding: 0 150px;
 }
 
-.dropdown {
+.drop {
   display: none;
-  position: relative;
-  top: -365px;
-  left: 60px;
+  position: absolute;
+  top: 150px;
+  left: 200px;
   height: 300px;
   width: 200px;
   z-index: 2;
@@ -107,12 +107,12 @@ footer ul li {
   background: rgba(0, 0, 0, 0.76); 
 }
   
-.dropdown .navigation {
+.drop .navigation {
   height: 250px;
   width: 150px;
 }
 
-.dropdown li {
+.drop li {
 
 /* add some styling */
 }
@@ -120,9 +120,9 @@ footer ul li {
 .holder {
   display: "";
   z-index: 2;
-  position: relative;
-/* how it was for the about page */
-  left: -130px;
+  position: absolute;
+ /* was with relative positioning:  left: -130px; */
+  left: 50px;
   height: 500px;
   width: 200px; 
   margin-left: 10px;

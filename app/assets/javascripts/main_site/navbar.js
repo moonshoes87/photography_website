@@ -4,19 +4,19 @@ $(document).ready(function(){
 
 
 function use_navbar(){
-    var $photographs = $(".holder .navigation .nav li#photographs");
+    var $photographs = $(".contains .holder .navigation .nav li#photographs");
     $photographs.click(function(e){
             e.preventDefault();
-            $(".dropdown").toggle();
+            $(".drop").toggle();
         });
     $photographs.hover(function(){
-            $(".dropdown").show();
+            $(".drop").show();
         },
         function(){
-            $(".dropdown").hide();
+            $(".drop").hide();
             //    $(".dropdown").delay().fadeOut();                                                                                         
         });
-    $(".dropdown").hover(function(){
+    $(".drop").hover(function(){
             $(this).show();
         },
         function(){
