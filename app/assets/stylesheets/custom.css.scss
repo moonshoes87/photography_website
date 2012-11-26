@@ -4,12 +4,15 @@ p {
   color: gray;
 }
 
+
+
 .center {
   text-align: center;
 }
 
 body {
   padding: 10px;
+  color: gray;
   background: black;
 /* background: #FFFFF0 !important */
 }
@@ -24,6 +27,19 @@ body {
 }
 
 .profile {
+  margin-left: 180px;
+}
+
+/* COMISSIONS PAGE */
+
+#comissions_pic {
+  width: 450px;
+  height: auto;
+  float: right;
+  margin: 25px;
+}
+
+.comissions {
   margin-left: 180px;
 }
 

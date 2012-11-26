@@ -1,5 +1,7 @@
 class Photo < ActiveRecord::Base
   attr_accessible :description, :id, :title, :price, :url, :type, :tag_ids
+  
+  default_scope order('created_at DESC')
 
   validates :title, :url, presence: true
 
