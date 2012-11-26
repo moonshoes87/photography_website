@@ -21,8 +21,8 @@
       <div class="holder border">
 	<div class="navigation border">
 	  <ul class="nav">
-	    <li><h2>Erik Lucero Photography</h2></li>
-            <li><%= link_to "Comissions", '#' %></li>
+	    <li><h2><%= link_to "Erik Lucero Photography", root_path %></h2></li>
+            <li><%= link_to "Comissions", pages_comissions_path %></li>
             <li><%= link_to "Profile", pages_about_path %></li>
             <li id="photographs"><%= link_to "Photographs", photo_index_path %></li>
             <li><%= link_to "Contact", pages_contact_path %></li>

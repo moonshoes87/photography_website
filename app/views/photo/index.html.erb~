@@ -1,3 +1,4 @@
+<!-- make this so that it's in the right place -->
 <h3 class="center"> Trying for a new display style </h3>
 
 <div class="container">
@@ -5,12 +6,12 @@
     <p>Put a default pretty image here</p>
   </div>
   <div id="slider">
+    <div id="click-back">Click back</div>
     <ul id="thumbnails">
-      <% @photos.each do |p| %>
+      <% @photos.each do |p|  %>
       <li class="nail"><%= image_tag "#{p.url}", class: "thumb crop portrait" %></li>
       <% end %>
     </ul>
+    <div id="click-forward">Click left</div>
   </div>
 </div>
-
-<p> center these.  link them so that they show up enlarged above when clicked on.  make a button so that it scrolls through them.  two rows is nice.  </p>

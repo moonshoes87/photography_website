@@ -1,7 +1,4 @@
-
-
-
-/* general */
+/* GENERAL */
 
 p {
   color: gray;
@@ -13,57 +10,21 @@ p {
 
 body {
   padding: 10px;
-  background: black !important;
+  background: black;
 /* background: #FFFFF0 !important */
 }
 
-/* header */
+/* HEADER */
 
-header h3 {
-   text-align: center;
+h1 { 
+  color: gray;
 }
 
 .clear {
   clear: both;
 }
 
-/* footer */
-
-footer {
-  clear: both;
-  padding: 20px;
-  margin: 20px 5px 20px 5px;
-} 
-footer ul {
-    float: right;
-    list-style: none;
-}
-footer ul li {
-    float: left;
-    padding: 20px;
-    margin-bottom: 60px;
-}
-
-
-/* entry page */
-
-#portal  {
-  color: gray;
-  width: 550px; 
-  margin: 0 auto; 
-  text-align: center; 
-}
-
-#enter img {
-  display: none;
-    left: 150px;
-    position: relative;
-}
-
-/* #enter img:hover {
-  opacity: 0.8;
-}
-*/
+/* ENTRY PAGE */
 
 
 /* from css-snippets.  problem: displaying anything on this page will be wacky.  */
@@ -98,7 +59,7 @@ footer ul li {
   display: none;
   position: absolute;
   top: 150px;
-  left: 230px;
+  left: 235px;
   height: 300px;
   width: 200px;
   z-index: 2;
@@ -106,16 +67,13 @@ footer ul li {
   color: gray;
   background: rgba(0, 0, 0, 0.76); 
 }
+
   
 .drop .navigation {
   height: 250px;
   width: 150px;
 }
 
-.drop li {
-
-/* add some styling */
-}
 
 .holder {
   display: "";
@@ -138,29 +96,45 @@ footer ul li {
   width: 150px;
   top: 25px;
   left: 25px;
+  border: 1px dashed white;
 }
+/* 
+ul.nav {
+  height: 450px;
+  width: 100px;
+}
+*/
 
 .nav li {
-  font-size: 1.5em;
+  position: relative;
+  left: -10px;
+  font-size: 1.25em;
   padding-bottom: 50px;
-
+  list-style: none;
+  a {
+    text-decoration: none;
+  } 
 }
 
-.nav:first-child {
-  padding-top: 20px;
+#erik {
+  padding-top: 10px;
+  font-size: 1.5em;
+  left: -20px;
 }
 
 
+#photographs {
+  width: 130px;
+}
 
-
-
-/* slider display area */
+/* SLIDER DISPLAY AREA */
 
 #display {
   width: 600px;
   height: 400px;
   border: 1px solid white;
   float: right;
+  margin-top: 35px;
 }
 
 div#slider {
@@ -171,7 +145,7 @@ div#slider {
 }
 
 
-/* thumbnails */
+/* THUMBNAILS */
 
 ul#thumbnails {
   list-style: none;
@@ -203,10 +177,9 @@ li.nail:hover{
 }
 
 
+/* PHOTOS  */
 
 
-
-/* photos */
 .image img{
   height: 250px;
   width: auto;
@@ -214,21 +187,6 @@ li.nail:hover{
   margin: 0 auto;
   display: block;
  }
-
-.main {
-  height: 750px;
-  width: 1200;
-  position: relative;
-}
-
-.main img{
-    height: 650px;
-    width: 900px;
-    margin: auto;
-    -webkit-box-shadow: 5px 5px 10px #000;
-    -moz-box-shadow: 5px 5px 10px #000;
-    box-shadow: 5px 5px 10px #000;
-}
 
 .index {
   display: none
@@ -274,13 +232,12 @@ li.nail:hover{
 /* testing */
 
 .border {
-  border: 1px solid black;
-  
+  border: 1px solid white;
 }
 
 
 
-/* slideshow */
+/* slideshow 
 
 #slideshow {
   margin: 50px auto;
@@ -297,7 +254,7 @@ li.nail:hover{
   left: 10px;
   right: 10px;
   bottom: 10px;
-  /* perhaps add sizing in */
 }
 
 
+*/

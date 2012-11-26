@@ -3,7 +3,7 @@ $(document).ready(function(){
 		var html = $(this).html();
 		$("#display").html(html).addClass("image");
 	    });
-	$("#click-back").click(function(){
+	$("#click-back, #click-forward").click(function(){
 		alert("you just clicked");
 	    });
     });

@@ -1,5 +1,5 @@
 class Photo < ActiveRecord::Base
-  attr_accessible :description, :title, :price, :url, :type, :tag_ids
+  attr_accessible :description, :id, :title, :price, :url, :type, :tag_ids
 
   validates :title, :url, presence: true
 
