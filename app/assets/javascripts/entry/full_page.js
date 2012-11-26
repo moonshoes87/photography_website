@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	black_or_white();
 	$(".holder").hide();
 	$("div#bg > img:gt(0)").hide();
 	$("div#bg img").click(function(){
@@ -8,6 +9,10 @@ $(document).ready(function(){
 	    });
     });
 
+
+function black_or_white(){
+    //randomly chooses to show the black/white or color entry photo
+}
 
 function start_slideshow(){
     $("div#bg img").fadeOut(3000);

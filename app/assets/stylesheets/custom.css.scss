@@ -75,7 +75,22 @@ h1 {
     min-height:50%;
 }
 
-/* navigation */
+#color {
+  color: black;
+  position: fixed;
+  bottom: 10px;
+  left: 600px;
+
+}
+
+#black_and_white {
+  color: black;
+  position: fixed;
+  bottom: 10px;
+  left: 400px; 
+}
+
+/* NAVIGATION */
 
 .contains {
   position: absolute;
