@@ -12,6 +12,14 @@ $(document).ready(function(){
 
 function black_or_white(){
     //randomly chooses to show the black/white or color entry photo
+    // something is wrong with this..... it returns undefined, not 0 or 1
+    var number= Math.floor(Math.random() * 2);
+    if(number ===1){
+	alert("black and white");
+    }
+    else{
+	alert("color");
+    }
 }
 
 function start_slideshow(){
