@@ -23,13 +23,15 @@ function black_or_white(){
 }
 
 
-var type = "color";
-var type_not = "black_and_white"
+var type = "black_and_white";
+var type_not = "color"
 function start_slideshow(){
-    // probably just add $("div#bg img.color"), or $("div#bg img.black_and_white") and proceed thusly
-    $("div#bg img").fadeOut(3000)
+    $("div#bg img").fadeOut(3000, function(){
+	    $("div#bg img." + type_not).hide();
+	});
+
 	// you need to make whats below not occur until what's above is done.  doesn't work as a callback of fadeOut, nor with a delay
-	$("div#bg img." + type_not).delay(3000).hide();
+   
     setInterval(function(){
 	    $("div#bg img." + type + ":first")
 		.fadeOut(1000)
