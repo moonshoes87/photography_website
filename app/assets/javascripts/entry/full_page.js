@@ -2,6 +2,16 @@ $(document).ready(function(){
 	var b_o_w = black_or_white();
 	$(".holder").hide();
 	$("div#bg > img:gt(0)").hide();
+	$("#color_button").click(function(){
+		choose_which_slideshow("color");
+		$("div#bg img.black_and_white:first").fadeOut(600);
+		$("div#bg img.color:first").fadeIn(600);
+	    });
+	$("#black_and_white_button").click(function(){
+		choose_which_slideshow("black_and_white");
+		$("div#bg img.color:first").fadeOut(600);
+		$("div#bg img.black_and_white:first").fadeIn(600);
+	    });
 	$("div#bg img").click(function(){
 		start_slideshow();
 		enter_navbar();
@@ -9,29 +19,41 @@ $(document).ready(function(){
 	    });
     });
 
+var type = "";
+var type_not = "";
 
 function black_or_white(){
     //randomly chooses to show the black/white or color entry photo
     // something is wrong with this..... it returns undefined, not 0 or 1
     var number= Math.floor(Math.random() * 2);
     if(number ===1){
-	return "black_and_white"
+	type = "black_and_white";
+	type_not = "color";
     }
     else{
-	return "color"
+	type = "color";
+	type_not = "black_and_white";
     }
 }
 
+function choose_which_slideshow(input){
+    if(input === "color"){
+	type = "color";
+	type_not = "black_and_white";
+    }
+    else if(input === "black_and_white"){
+	type = "black_and_white";
+	type_not = "color";
+    }
+    else{
+	alert("error");
+    }
+}
 
-var type = "black_and_white";
-var type_not = "color"
 function start_slideshow(){
-    $("div#bg img").fadeOut(3000, function(){
-	    $("div#bg img." + type_not).hide();
+    $("div#bg img:first").fadeOut(3000, function(){
+	    $("div#bg img." + type_not).remove();
 	});
-
-	// you need to make whats below not occur until what's above is done.  doesn't work as a callback of fadeOut, nor with a delay
-   
     setInterval(function(){
 	    $("div#bg img." + type + ":first")
 		.fadeOut(1000)
