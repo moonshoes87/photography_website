@@ -1,19 +1,25 @@
+// issues:
+// sometimes navbar shows before page loads
+// will people be confused, and not how to start the slideshow?  
+
 $(document).ready(function(){
-	var b_o_w = black_or_white();
 	$(".holder").hide();
-	$("div#bg > img:gt(0)").hide();
-	$("#color_button").click(function(){
+	black_or_white();
+	$("div#bg > img").hide();
+	$("div#bg img." + type + ":first").fadeIn(600);
+	$("#color_button").on("click", function(){
 		choose_which_slideshow("color");
 		$("div#bg img.black_and_white:first").fadeOut(600);
 		$("div#bg img.color:first").fadeIn(600);
 	    });
-	$("#black_and_white_button").click(function(){
+	$("#black_and_white_button").on("click", function(){
 		choose_which_slideshow("black_and_white");
 		$("div#bg img.color:first").fadeOut(600);
 		$("div#bg img.black_and_white:first").fadeIn(600);
 	    });
 	$("div#bg img").click(function(){
 		start_slideshow();
+		//$("#color_button, #black_and_white_button").hide();
 		enter_navbar();
 		$('div#bg img').unbind('click');
 	    });
@@ -23,8 +29,6 @@ var type = "";
 var type_not = "";
 
 function black_or_white(){
-    //randomly chooses to show the black/white or color entry photo
-    // something is wrong with this..... it returns undefined, not 0 or 1
     var number= Math.floor(Math.random() * 2);
     if(number ===1){
 	type = "black_and_white";
@@ -50,9 +54,13 @@ function choose_which_slideshow(input){
     }
 }
 
+// consider adding in a way to stop any previous slideshowing.  i.e., fetching_flights = null or whatever.  
+// or, you can just remove the imgs that are not of the proper type, and make the buttons disappear.  
+// right now, it is buggy.  
+
 function start_slideshow(){
-    $("div#bg img:first").fadeOut(3000, function(){
-	    $("div#bg img." + type_not).remove();
+    $("div#bg img." + type + ":first").fadeOut(1000, function(){
+	    $("div#bg img." + type_not).hide(); // remove()
 	});
     setInterval(function(){
 	    $("div#bg img." + type + ":first")
@@ -63,13 +71,6 @@ function start_slideshow(){
 		.appendTo("#bg");
 	}, 3000);
 }
-
-/* function start_slideshow_color(){
-   $("div#bg img").fadeOut(3000);
-   $(
-
-
-*/
 
 function enter_navbar(){
     $(".holder").fadeIn(1000, function(){
