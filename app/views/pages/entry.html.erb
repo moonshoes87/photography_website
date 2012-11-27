@@ -4,11 +4,13 @@
 
 <div id="bg">
   <% @photos.each do |photo| %>
-    <%= image_tag photo.url %>
-    
+  <% if photo.color_type == "color" %>
+    <%= image_tag photo.url, class: "color" %>
+  <% else %>
+    <%= image_tag photo.url, class: "black_and_white" %>
+    <% end %>
   <% end %>
-
 </div>
 </div>
-<p id="color">Click here for color</p>
-<p id="black_and_white">Click here for black and white</p>
+<p id="color_button">Click here for color</p>
+<p id="black_and_white_button">Click here for black and white</p>
