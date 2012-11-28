@@ -15,6 +15,10 @@ PhotographyWebsite::Application.routes.draw do
 
   get "pages/contact"
 
+
+  #ADDED THIS, NOT TO SURE...
+  post "pages/email_erik"
+
   get "pages/entry"
   
   get "pages/comissions"

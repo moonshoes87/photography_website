@@ -1,23 +1,18 @@
 
-<h1>Contact me</h1>
-<p>Find me in app/views/pages/contact.html.erb</p>
+<h1 class="center">Contact me</h1>
+<p class="center">Find me in app/views/pages/contact.html.erb</p>
+<%= form_tag({action: 'email_erik'}, :remote => true, 'data-type' => 'script') do %>
+  <input id="mail_sender" name="mail_sender" type="email" placeholder="Your email address"/>
+  <input id="mail_subject" name="mail_subject" type="text" placeholder="Subject"/>
+  <textarea id="mail_content" name="mail_content" placeholder="Your message"></textarea>
+  <input id="send_mail" type="submit" value="Send" />
+<% end %>
 
-<section>
-  <ul class="thumbnails">
-    <% @photos.each do |p| %>
-      <% if p.image_type == "portrait" %>
-        <li class="contain"><%= image_tag(p.url, class: "crop portrait center") %></li>
-        <% else %>
-        <li class="contain center"><%= image_tag(p.url, class: "crop center") %></li>
-	<% end %>
-      <% end %>
-  </ul>
-</section>
-<br />
-<section>
-  <ul class="thumbnails">
-    <% @photos.each do |p| %>
-    <li class="span4"><%= image_tag(p.url, class: "crop portrait") %></li>
-    <% end %>
-  </ul>
-</section>
+
+<!--     form_tag({:action => 'tell_nancy'}, :remote => true, 'data-type' => 'script') do
+          <input id="form_sender" name="form_sender" type="email" placeholder="Your email address"/>
+          <input id='form_subject' name="form_subject" type="text" placeholder="Subject"/>
+          <textarea id='form_body' name="form_body" placeholder="Your message…"></textarea>
+          <input id="send_message" type="submit" value="Send" />
+         end 
+__>

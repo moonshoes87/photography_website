@@ -15,6 +15,16 @@ class PagesController < ApplicationController
   @photos = Photo.all
   end
 
+  def email_erik
+    if params[:mail_sender] != ''
+    # should be?  ContactErikMailer.delay.email_erik(params)
+      result= ContactErikMailer.email_erik(params).deliver
+      render :text => "$('p#message_sent').text('Well done')"
+    else
+      render :text => "$('p#message_sent').text('Sorry, try again')"
+    end
+  end
+
   def entry
   @photos = Photo.all
   end

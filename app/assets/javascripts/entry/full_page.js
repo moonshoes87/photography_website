@@ -1,5 +1,5 @@
 // issues:
-// sometimes navbar shows before page loads
+// sometimes navbar shows before page loads.  possible way to deal: call show_navbar() type function on every page, and set the default to display: none (or the invisible version, whatever)
 // will people be confused, and not how to start the slideshow?  
 
 $(document).ready(function(){

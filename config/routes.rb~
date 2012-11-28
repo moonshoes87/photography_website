@@ -16,6 +16,8 @@ PhotographyWebsite::Application.routes.draw do
   get "pages/contact"
 
   get "pages/entry"
+  
+  get "pages/comissions"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
