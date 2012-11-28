@@ -43,6 +43,24 @@ body {
   margin-left: 180px;
 }
 
+/* CONTACT */
+
+#mail_sender {
+  float: right;
+}
+
+#mail_subject {
+  float: right;
+}
+
+#mail_content {
+ float: right;
+}
+
+#send_mail {
+  float: right;
+}
+
 /* HEADER */
 
 h1 { 
