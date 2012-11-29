@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Photography Website</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %>
+  </head>
+  <body>
+    <div>
+      <% if false %>
+      <div class="notice"><%= notice %></div>
+      <% end %>
+      <% if alert %>
+      <p class="alert"><%= alert %></p>
+      <% end %>
+    </div>
+    
+    <div class="contains">
+      <div class="holder border">
+	<div class="navigation">
+	  <ul class="nav">
+	    <li id="erik"><%= link_to "Erik Lucero Photography", root_path %></li>
+            <li><%= link_to "Comissions", pages_comissions_path %></li>
+            <li><%= link_to "Profile", pages_about_path %></li>
+            <li id="photographs"><%= link_to "Photographs", photo_index_path %></li>
+            <li><%= link_to "Contact", pages_contact_path %></li>
+	  </ul>
+	</div>
+      </div>
+      
+      <div class="drop border">
+	<div class="navigation">
+	  <ul class="nav">
+            <li><%= link_to "Pictures!", photo_index_path %></li>
+            <li><%= link_to "More", photo_index_path %></li>
+            <li><%= link_to "Even more", photo_index_path %></li>
+	  </ul>
+	</div>
+      </div>
+   <!-- </div> moved this to allow jquery to work -->
+    
+    <%= yield %>
+    </div>
+  </body>
+</html>
+
+
+
+

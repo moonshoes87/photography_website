@@ -4,11 +4,7 @@ $(document).ready(function(){
 
 
 function use_navbar(){
-    var $photographs = $(".contains .holder .navigation .nav li#photographs");
-    // $photographs.click(function(e){
-    //      e.preventDefault();
-    //      $(".drop").toggle();
-    //  });
+    var $photographs = $("li#photographs");
     $photographs.hover(function(){
             $(".drop").show();
         },

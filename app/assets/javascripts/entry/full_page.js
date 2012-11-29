@@ -31,7 +31,6 @@ $(document).ready(function(){
 	    });
 	$("div#bg img").click(function(){
 		start_slideshow();
-		//$("#color_button, #black_and_white_button").hide();
 		enter_navbar();
 		$('div#bg img').unbind('click');
 	    });
@@ -66,19 +65,15 @@ function choose_which_slideshow(input){
     }
 }
 
-// consider adding in a way to stop any previous slideshowing.  i.e., fetching_flights = null or whatever.  
-// or, you can just remove the imgs that are not of the proper type, and make the buttons disappear.  
-// right now, it is buggy.  
-
 function start_slideshow(){
-    //    $("div#bg img." + type_not + ":first").fadeOut(1000);
-    // you need to tell it to fadeout #bg img where display: block
     $("#color_button, #black_and_white_button").fadeOut(800);
     $("#bg img.shown").fadeOut(1000, function(){
 	    $("#bg img." + type_not).remove(); // .hide() doesn't work as well
+	    $("#bg img").removeClass("hidden").hide();
+	    $("#bg img").removeClass("shown");
 	});
     setInterval(function(){
-	    $("#bg img." + type + ":first")
+	    $("#bg img:first")
 		.fadeOut(1000)
 		.next()
 		.fadeIn(1000)

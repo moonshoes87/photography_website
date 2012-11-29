@@ -12,5 +12,5 @@
   <% end %>
 </div>
 </div>
-<p id="color">Click here for color</p>
-<p id="black_and_white">Click here for black and white</p>
+<p id="color_button">Click here for color</p>
+<p id="black_and_white_button">Click here for black and white</p>
