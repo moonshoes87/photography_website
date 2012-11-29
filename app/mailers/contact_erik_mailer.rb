@@ -5,6 +5,6 @@ class ContactErikMailer < ActionMailer::Base
     @from = mail_hash[:mail_sender]
     @subject = mail_hash[:mail_subject]
     @content = mail_hash[:mail_content]
-    mail(:to => "mintblue87@gmail.com", :subject => "Email from #{@from}")
+    mail(:to => "zlotnika@gmail.com", :subject => "Email from #{@from}")
   end
 end
