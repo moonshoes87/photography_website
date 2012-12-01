@@ -1,7 +1,6 @@
 class PagesController < ApplicationController
 
 #  layout "first_page", :only => :entry
-#  
 #  should no longer need to use above
 
   def home
@@ -19,7 +18,8 @@ class PagesController < ApplicationController
   def email_erik
     if params[:mail_sender] != ''
     # should be?  ContactErikMailer.delay.email_erik(params)
-      result= ContactErikMailer.email_erik(params).deliver
+      result = ContactErikMailer.email_erik(params).deliver
+      puts "here's the" + result.to_s +  "DONE!!!"
       render :text => "$('p#message_sent').text('Well done')"
     else
       render :text => "$('p#message_sent').text('Sorry, try again')"

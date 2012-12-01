@@ -49,7 +49,7 @@ PhotographyWebsite::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Precompile additional assets (application.js, application.css, and all non-JS/CSS are already added)
-   config.assets.precompile += ['rails_admin/rails_admin.css', 'rails_admin/rails_admin.js']
+   config.assets.precompile += ['rails_admin/rails_admin.css', 'rails_admin/rails_admin.js', 'entry.js', 'main_site.js']
    # LORI changed this so that rails admin will work
 
 

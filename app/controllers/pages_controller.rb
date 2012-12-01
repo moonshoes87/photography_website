@@ -17,9 +17,9 @@ class PagesController < ApplicationController
 
   def email_erik
     if params[:mail_sender] != ''
-    # should be?  ContactErikMailer.delay.email_erik(params)
-      result = ContactErikMailer.email_erik(params).deliver
-      puts "here's the" + result.to_s +  "DONE!!!"
+      #removed .deliver from below, and now it works
+      # used to say result = Contact ErikMailer.email_erik(params).deliver and it used to fucking work
+      ContactErikMailer.email_erik(params).deliver
       render :text => "$('p#message_sent').text('Well done')"
     else
       render :text => "$('p#message_sent').text('Sorry, try again')"
