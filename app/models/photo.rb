@@ -3,7 +3,7 @@ class Photo < ActiveRecord::Base
   
   default_scope order('created_at DESC')
 
-  validates :title, :url, presence: true
+  validates :title, :url, presence: true, uniqueness: true
 
   has_and_belongs_to_many :tags, uniq: true
 

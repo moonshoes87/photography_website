@@ -71,6 +71,7 @@ function start_slideshow(){
 	    $("#bg img." + type_not).remove(); // .hide() doesn't work as well
 	    $("#bg img").removeClass("hidden").hide();
 	    $("#bg img").removeClass("shown");
+	    $("#bg img:eq(1)".fadeIn(1000);
 	});
     setInterval(function(){
 	    $("#bg img:first")

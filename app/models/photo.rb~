@@ -1,5 +1,5 @@
 class Photo < ActiveRecord::Base
-  attr_accessible :description, :id, :title, :price, :url, :type, :tag_ids
+  attr_accessible :description, :id, :title, :price, :url, :type, :tag_ids, :image_type, :color_type
   
   default_scope order('created_at DESC')
 
