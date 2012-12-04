@@ -1,13 +1,17 @@
-<head>
+
 <%= javascript_include_tag "entry" %>
-</head>
+
 
 <div id="bg">
   <% @photos.each do |photo| %>
   <% if photo.color_type == "color" %>
-    <%= image_tag photo.url, class: "color" %>
+    <% if photo.image_type == "landscape" %>
+      <%= image_tag photo.url, class: "color" %>
+    <% end %>  
   <% else %>
-    <%= image_tag photo.url, class: "black_and_white" %>
+    <% if photo.image_type == "landscape" %>
+      <%= image_tag photo.url, class: "black_and_white" %>
+      <% end %>
     <% end %>
   <% end %>
 </div>

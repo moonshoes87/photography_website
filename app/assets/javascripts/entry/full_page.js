@@ -71,8 +71,8 @@ function start_slideshow(){
 	    $("#bg img." + type_not).remove(); // .hide() doesn't work as well
 	    $("#bg img").removeClass("hidden").hide();
 	    $("#bg img").removeClass("shown");
-	    $("#bg img:eq(1)".fadeIn(1000);
-	});
+	    $("#bg img:eq(1)".fadeIn(1000);  //with that error missing parenthesis it works... ?
+	});      
     setInterval(function(){
 	    $("#bg img:first")
 		.fadeOut(1000)
@@ -80,7 +80,9 @@ function start_slideshow(){
 		.fadeIn(1000)
 		.end()
 		.appendTo("#bg");
-	}, 3000);
+	}, 2000);
+
+       
 }
 
 function enter_navbar(){
