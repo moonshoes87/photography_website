@@ -3,7 +3,6 @@
 // will people be confused, and not how to start the slideshow?  
 // make it so that if they choose black and white or color the slideshow immediately starts, and the current picture fades out gracefully
 
-
 // change so that you replace the .hide() and .show() with addClass("hidden") and removeClass("hidden").  or, possibly:
 // addClass("shown") and removeClass("shown").  this way you can select by hidden elements, or by showing elements
 // .shown { display: block; }
@@ -13,8 +12,9 @@
 $(document).ready(function(){
 	$(".holder").hide();
 	black_or_white();
-	$("div#bg img").addClass("hidden");
-	$("div#bg img." + type + ":first").fadeIn(600).removeClass("hidden").addClass("shown");
+	$("#bg img").addClass("hidden");
+	// apparently, fading in kills the "hidden" class (below)
+	$("#bg img." + type + ":first").fadeIn(600).addClass("shown");
 	$("#color_button").on("click", function(){
 		choose_which_slideshow("color");
 		//$("div#bg img.black_and_white:first").fadeOut(600);
@@ -71,9 +71,14 @@ function start_slideshow(){
 	    $("#bg img." + type_not).remove(); // .hide() doesn't work as well
 	    $("#bg img").removeClass("hidden").hide();
 	    $("#bg img").removeClass("shown");
-	    $("#bg img:eq(1)".fadeIn(1000);  //with that error missing parenthesis it works... ?
+	    // $("#bg img:first").fadeIn(1000);  //with that error missing parenthesis it works... ? $("#bg img:eq(1)".fadeIn()
 	});      
-    setInterval(function(){
+    //for some reason, it is skipping the next function
+    alert("working here");
+    $("#bg img:first").fadeIn(1000, function(){
+	    alert("working");
+	});
+   window.setInterval(function(){
 	    $("#bg img:first")
 		.fadeOut(1000)
 		.next()
