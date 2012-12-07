@@ -15,7 +15,7 @@ $(document).ready(function(){
 	black_or_white();
 	$("#bg img").addClass("hidden");
 	// apparently, fading in kills the "hidden" class (below)
-	$("#bg img." + type + ":first").fadeIn(600).addClass("shown");
+	$("#bg img." + type + ":first").fadeIn(600).removeClass("hidden").addClass("shown")
 	$("#color_button").on("click", function(){
 		choose_which_slideshow("color");
 		//$("div#bg img.black_and_white:first").fadeOut(600);
@@ -67,15 +67,17 @@ function choose_which_slideshow(input){
 }
 
 function start_slideshow(){
+    $("#bg img." + type_not).remove();
+    // verified that this works, all the wrong ones get removed here
     $("#color_button, #black_and_white_button").fadeOut(800);
-    $("#bg img.shown").fadeOut(1000, function(){
-	    $("#bg img." + type_not).remove(); // .hide() doesn't work as well
-	    $("#bg img").removeClass("hidden").hide();
+    $("#bg img.hidden").removeClass("hidden shown").hide();
+    // verified that hidden and shown are indeed removed, and display: none is set for all hidden items
+    $("#bg img.shown").fadeOut(2000, function(){
+	    $(this).removeClass("hidden").hide();
 	    $("#bg img").removeClass("shown");
-	    // $("#bg img:first").fadeIn(1000);  //with that error missing parenthesis it works... ? $("#bg img:eq(1)".fadeIn()
 	});      
-    $("#bg img:first").fadeIn(1000, function(){
-	});
+    $("#bg img:eq(1)").fadeIn(2000, function(){
+    });
    window.setInterval(function(){
 	    $("#bg img:first")
 		.fadeOut(1000)
@@ -89,7 +91,7 @@ function start_slideshow(){
 }
 
 function enter_navbar(){
-    $(".holder").fadeIn(1000, function(){
+    $(".holder").fadeIn(2000, function(){
 	    return true;
 	});
 }
