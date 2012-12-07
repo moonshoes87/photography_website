@@ -108,6 +108,15 @@ h1 {
   left: 400px; 
 }
 
+.hidden {
+  display: none;
+}
+
+.shown {
+  display: block;
+}
+
+
 /* NAVIGATION */
 
 .contains {

@@ -93,19 +93,38 @@ h1 {
     min-height:50%;
 }
 
-#color_button {
-  color: black;
+#button_holder {
   position: fixed;
-  bottom: 10px;
-  left: 600px;
-
+  height: 700px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-#black_and_white_button {
-  color: black;
-  position: fixed;
+#button_center {
+  width: 200px;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  bottom: 0;
+}  
+
+#color_button {
+  color: #D3D3D3;
+  position: absolute;
   bottom: 10px;
-  left: 400px; 
+  width: 200px;
+  text-align: left;
+}
+
+
+#black_and_white_button {
+  color: #D3D3D3;
+  position: absolute;
+  text-align: right;
+  bottom: 10px;
+  width: 200px;
 }
 
 .hidden {

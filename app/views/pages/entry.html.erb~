@@ -7,7 +7,7 @@
   <% if photo.color_type == "color" %>
     <% if photo.image_type == "landscape" %>
       <%= image_tag photo.url, class: "color" %>
-    <% end %>  
+    <% end %>
   <% else %>
     <% if photo.image_type == "landscape" %>
       <%= image_tag photo.url, class: "black_and_white" %>
