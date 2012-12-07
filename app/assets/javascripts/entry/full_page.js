@@ -1,3 +1,4 @@
+
 // issues:
 // sometimes navbar shows before page loads.  possible way to deal: call show_navbar() type function on every page, and set the default to display: none (or the invisible version, whatever)
 // will people be confused, and not how to start the slideshow?  
@@ -73,10 +74,7 @@ function start_slideshow(){
 	    $("#bg img").removeClass("shown");
 	    // $("#bg img:first").fadeIn(1000);  //with that error missing parenthesis it works... ? $("#bg img:eq(1)".fadeIn()
 	});      
-    //for some reason, it is skipping the next function
-    alert("working here");
     $("#bg img:first").fadeIn(1000, function(){
-	    alert("working");
 	});
    window.setInterval(function(){
 	    $("#bg img:first")
