@@ -4,17 +4,12 @@
 // will people be confused, and not how to start the slideshow?  
 // make it so that if they choose black and white or color the slideshow immediately starts, and the current picture fades out gracefully
 
-// change so that you replace the .hide() and .show() with addClass("hidden") and removeClass("hidden").  or, possibly:
-// addClass("shown") and removeClass("shown").  this way you can select by hidden elements, or by showing elements
-// .shown { display: block; }
-// .hidden { display: none; }
-
+// you need to add a "fetching flights" type variable.  see jquery air slides.  this will allow you to not have the start_slideshow function double run when you hit the #button_holder and one of the buttons
 
 $(document).ready(function(){
 	$(".holder").hide();
 	black_or_white();
 	$("#bg img").addClass("hidden");
-	// apparently, fading in kills the "hidden" class (below)
 	$("#bg img." + type + ":first").fadeIn(600).removeClass("hidden").addClass("shown")
 	$("#color_button").on("click", function(){
 		choose_which_slideshow("color");
@@ -30,10 +25,10 @@ $(document).ready(function(){
 		start_slideshow();
 		enter_navbar();
 	    });
-	$("div#bg img").click(function(){
+	$("#button_holder").click(function(){
 		start_slideshow();
 		enter_navbar();
-		$('div#bg img').unbind('click');
+		$('#button_holder').unbind('click');
 	    });
     });
 
@@ -66,28 +61,41 @@ function choose_which_slideshow(input){
     }
 }
 
-function start_slideshow(){
-    $("#bg img." + type_not).remove();
-    // verified that this works, all the wrong ones get removed here
-    $("#color_button, #black_and_white_button").fadeOut(800);
-    $("#bg img.hidden").removeClass("hidden shown").hide();
-    // verified that hidden and shown are indeed removed, and display: none is set for all hidden items
-    $("#bg img.shown").fadeOut(2000, function(){
-	    $(this).removeClass("hidden").hide();
-	    $("#bg img").removeClass("shown");
-	});      
-    $("#bg img:eq(1)").fadeIn(2000, function(){
-    });
-   window.setInterval(function(){
-	    $("#bg img:first")
-		.fadeOut(1000)
-		.next()
-		.fadeIn(1000)
-		.end()
-		.appendTo("#bg");
-	}, 2000);
+starting_slideshow = null;
 
-       
+function start_slideshow(){
+    if (starting_slideshow === true){
+	return "success";
+    }
+    else {
+	do_slideshow();
+    }
+    function do_slideshow(){
+	starting_slideshow = true;
+	$("#bg img." + type_not + ":hidden").remove();
+	// verified that this works, all the wrong ones get removed here
+	$("#color_button, #black_and_white_button").fadeOut(800);
+	$("#bg img.hidden").removeClass("hidden shown").hide();
+	// verified that hidden and shown are indeed removed, and display: none is set for all hidden items
+	$("#bg img.shown").fadeOut(2000, function(){
+		$(this).removeClass("hidden").hide();
+		$("#bg img").removeClass("shown");
+	    });
+	
+	$("#bg img:eq(1)").fadeIn(2000, function(){
+		$("#bg img." + type_not).remove();
+	    });
+	window.setInterval(function(){
+		
+		$("#bg img:first")
+		    .fadeOut(1000)
+		    .next()
+		    .fadeIn(1000)
+		    .end()
+		    .appendTo("#bg");
+	    }, 2000);
+	//	starting_slideshow = null;
+    }
 }
 
 function enter_navbar(){
