@@ -34,5 +34,8 @@ class PhotoController < ApplicationController
   @photos = Tag.find_by_id(5).photos
   end
 
+  def black_and_white
+  @photos = Photo.black_and_white
+  end
 
 end

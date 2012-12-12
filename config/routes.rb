@@ -11,6 +11,8 @@ PhotographyWebsite::Application.routes.draw do
 
   get "photo/kitchen_and_food"
 
+  get "photo/black_and_white"
+
   get "pages/home"
 
   get "pages/about"

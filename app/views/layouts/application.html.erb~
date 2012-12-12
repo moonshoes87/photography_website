@@ -33,7 +33,7 @@
       <div class="drop border">
 	<div class="navigation">
 	  <ul class="nav">
-            <li><%= link_to "Pictures!", photo_index_path %></li>
+            <li><%= link_to "Tasty things", photo_kitchen_and_food_path %></li>
             <li><%= link_to "More", photo_index_path %></li>
             <li><%= link_to "Even more", photo_index_path %></li>
 	  </ul>
