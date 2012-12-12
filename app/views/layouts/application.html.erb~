@@ -19,9 +19,9 @@
     
     <div class="contains">
       <div class="holder border">
-	<div class="navigation border">
+	<div class="navigation">
 	  <ul class="nav">
-	    <li><h2><%= link_to "Erik Lucero Photography", root_path %></h2></li>
+	    <li id="erik"><%= link_to "Erik Lucero Photography", root_path %></li>
             <li><%= link_to "Comissions", pages_comissions_path %></li>
             <li><%= link_to "Profile", pages_about_path %></li>
             <li id="photographs"><%= link_to "Photographs", photo_index_path %></li>
@@ -31,7 +31,7 @@
       </div>
       
       <div class="drop border">
-	<div class="navigation border">
+	<div class="navigation">
 	  <ul class="nav">
             <li><%= link_to "Pictures!", photo_index_path %></li>
             <li><%= link_to "More", photo_index_path %></li>

@@ -29,4 +29,10 @@ class PhotoController < ApplicationController
   @photo = Photo.find(params[:id])
   @photo.destroy
   end
+
+  def kitchen_and_food
+  @photos = Tag.find_by_id(5).photos
+  end
+
+
 end

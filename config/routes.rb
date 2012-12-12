@@ -9,6 +9,8 @@ PhotographyWebsite::Application.routes.draw do
 
   get "photo/show"
 
+  get "photo/kitchen_and_food"
+
   get "pages/home"
 
   get "pages/about"
