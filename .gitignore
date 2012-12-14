@@ -16,4 +16,4 @@
 *~
 *#
 /public/assets
-*.jpg
+#*.jpg
