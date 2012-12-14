@@ -16,4 +16,9 @@
 *~
 *#
 /public/assets
+<<<<<<< HEAD
 #*.jpg
+=======
+*.jpg
+.DS_Store
+>>>>>>> 623e2027354e65528a6f97ecf165daebe7da774f
