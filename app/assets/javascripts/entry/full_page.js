@@ -13,15 +13,11 @@ $(document).ready(function(){
 	$("#bg img." + type + ":first").fadeIn(600).removeClass("hidden").addClass("shown")
 	$("#color_button").on("click", function(){
 		choose_which_slideshow("color");
-		//$("div#bg img.black_and_white:first").fadeOut(600);
-		//$("div#bg img.color:first").fadeIn(600);
 		start_slideshow();
 		enter_navbar();
 	    });
 	$("#black_and_white_button").on("click", function(){
 		choose_which_slideshow("black_and_white");
-		//$("div#bg img.color:first").fadeOut(600);
-		//$("div#bg img.black_and_white:first").fadeIn(600);
 		start_slideshow();
 		enter_navbar();
 	    });
