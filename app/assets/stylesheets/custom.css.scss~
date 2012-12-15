@@ -244,14 +244,14 @@ div#slider {
 ul#thumbnails {
   list-style: none;
   float: left;
-  width: 527px;
+  width: 550px;
   border: 1px dashed white;
   height: 130px;
   overflow: hidden;
 }
 
 #click-back {
-  width: 20px;
+  width: 55px;
   margin-top: 30px;
   position: absolute;
   top: 1px;
@@ -260,10 +260,10 @@ ul#thumbnails {
 
 #click-forward {
   position: absolute;
-  width: 20px;
+  width: 55px;
   margin-top: 30px;
   top: 1px;
-  right; 1px;
+  right: 1px;
 }
 
 li.nail {

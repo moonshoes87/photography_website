@@ -1,7 +1,19 @@
 /* GENERAL */
 
-p {
+p { 
   color: gray;
+ /* background: rgba(0, 0, 0, 0.76);
+  display: block;
+   display: inline ??? */
+}
+
+.paragraphs {
+  padding: 2px;
+  color: gray;
+  background: rgba(0, 0, 0, 0.76);
+  width: 800px;
+  position: relative;
+  left: 150px;
 }
 
 
@@ -13,8 +25,8 @@ p {
 body {
   padding: 10px;
   color: gray;
-  background: black;
-/* background: #FFFFF0 !important */
+  background: gray;
+  background-image: url("background_images/old_paper.jpg");
 }
 
 /* PROFILE PAGE */
@@ -39,9 +51,11 @@ body {
   margin: 25px;
 }
 
+/*
 .comissions {
-  margin-left: 180px;
+  margin-left: 180px; 
 }
+*/
 
 /* CONTACT */
 
@@ -205,6 +219,7 @@ ul.nav {
   list-style: none;
   a {
     text-decoration: none;
+    color: gray;
   } 
 }
 
@@ -222,6 +237,7 @@ ul.nav {
 /* SLIDER DISPLAY AREA */
 
 #display {
+  background: rgba(0, 0, 0, 0.76); 
   width: 600px;
   height: 400px;
   border: 1px solid white;
@@ -242,6 +258,7 @@ div#slider {
 /* THUMBNAILS */
 
 ul#thumbnails {
+  background: rgba(0, 0, 0, 0.76); 
   list-style: none;
   float: left;
   width: 550px;
@@ -283,13 +300,13 @@ li.nail:hover{
 
 
 .image img{
-  height: 370px;
+  height: 395px;
   width: auto;
   border: 1px solid black;
   margin: 0 auto;
   display: block;
   position: relative;
-  top: 10px;
+  top: 1px;
  }
 
 /* PHOTOS */
