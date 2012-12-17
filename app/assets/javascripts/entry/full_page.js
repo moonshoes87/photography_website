@@ -72,14 +72,6 @@ function start_slideshow(){
 	$("#color_button, #black_and_white_button").fadeOut(2000);
 	$("#bg img.hidden").removeClass("hidden shown").hide();
 	// verified that hidden and shown are indeed removed, and display: none is set for all hidden items
-	$("#bg img.shown").fadeOut(2800, function(){
-		$(this).removeClass("hidden").hide();
-		$("#bg img").removeClass("shown");
-	    });
-	
-	$("#bg img:eq(1)").fadeIn(2800, function(){
-		$("#bg img." + type_not).remove();
-	    });
 	window.setInterval(function(){
 		$("#bg img:first")
 		    .fadeOut(1000)
@@ -88,6 +80,22 @@ function start_slideshow(){
 		    .end()
 		    .appendTo("#bg");
 	    }, 2800);
+	$("#bg img.shown").fadeOut(2800, function(){
+		$(this).removeClass("hidden").hide();
+		$("#bg img").removeClass("shown");
+	    });
+	
+	$("#bg img:eq(1)").fadeIn(2800, function(){
+		$("#bg img." + type_not).remove();
+	    });
+	//window.setInterval(function(){
+	//$("#bg img:first")
+	//    .fadeOut(1000)
+	//    .next()
+	//    .fadeIn(1000)
+	//    .end()
+	//    .appendTo("#bg");
+	//  }, 2800);
 	//	starting_slideshow = null;
     }
 }
