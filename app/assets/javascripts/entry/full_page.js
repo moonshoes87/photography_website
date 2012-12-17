@@ -68,10 +68,8 @@ function start_slideshow(){
     function do_slideshow(){
 	starting_slideshow = true;
 	$("#bg img." + type_not + ":hidden").remove();
-	// verified that this works, all the wrong ones get removed here
 	$("#color_button, #black_and_white_button").fadeOut(2000);
 	$("#bg img.hidden").removeClass("hidden shown").hide();
-	// verified that hidden and shown are indeed removed, and display: none is set for all hidden items
 	window.setInterval(function(){
 		$("#bg img:first")
 		    .fadeOut(1000)
@@ -80,12 +78,12 @@ function start_slideshow(){
 		    .end()
 		    .appendTo("#bg");
 	    }, 2800);
-	$("#bg img.shown").fadeOut(2800, function(){
+	$("#bg img.shown").fadeOut(3200, function(){
 		$(this).removeClass("hidden").hide();
 		$("#bg img").removeClass("shown");
 	    });
 	
-	$("#bg img:eq(1)").fadeIn(2800, function(){
+	$("#bg img:eq(1)").fadeIn(3200, function(){
 		$("#bg img." + type_not).remove();
 	    });
 	//window.setInterval(function(){
