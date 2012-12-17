@@ -7,6 +7,8 @@
 // you need to add a "fetching flights" type variable.  see jquery air slides.  this will allow you to not have the start_slideshow function double run when you hit the #button_holder and one of the buttons
 
 $(document).ready(function(){
+	$("body").css("background", "black");
+        // set body css to background-image: none or background: black
 	$(".holder").hide();
 	black_or_white();
 	$("#bg img").addClass("hidden");
