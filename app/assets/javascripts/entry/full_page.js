@@ -2,13 +2,10 @@
 // issues:
 // sometimes navbar shows before page loads.  possible way to deal: call show_navbar() type function on every page, and set the default to display: none (or the invisible version, whatever)
 // will people be confused, and not how to start the slideshow?  
-// make it so that if they choose black and white or color the slideshow immediately starts, and the current picture fades out gracefully
 
-// you need to add a "fetching flights" type variable.  see jquery air slides.  this will allow you to not have the start_slideshow function double run when you hit the #button_holder and one of the buttons
 
 $(document).ready(function(){
 	$("body").css("background", "black");
-        // set body css to background-image: none or background: black
 	$(".holder").hide();
 	black_or_white();
 	$("#bg img").addClass("hidden");
@@ -72,26 +69,25 @@ function start_slideshow(){
 	starting_slideshow = true;
 	$("#bg img." + type_not + ":hidden").remove();
 	// verified that this works, all the wrong ones get removed here
-	$("#color_button, #black_and_white_button").fadeOut(800);
+	$("#color_button, #black_and_white_button").fadeOut(2000);
 	$("#bg img.hidden").removeClass("hidden shown").hide();
 	// verified that hidden and shown are indeed removed, and display: none is set for all hidden items
-	$("#bg img.shown").fadeOut(2000, function(){
+	$("#bg img.shown").fadeOut(2800, function(){
 		$(this).removeClass("hidden").hide();
 		$("#bg img").removeClass("shown");
 	    });
 	
-	$("#bg img:eq(1)").fadeIn(2000, function(){
+	$("#bg img:eq(1)").fadeIn(2800, function(){
 		$("#bg img." + type_not).remove();
 	    });
 	window.setInterval(function(){
-		
 		$("#bg img:first")
 		    .fadeOut(1000)
 		    .next()
 		    .fadeIn(1000)
 		    .end()
 		    .appendTo("#bg");
-	    }, 2000);
+	    }, 2800);
 	//	starting_slideshow = null;
     }
 }
