@@ -17,6 +17,6 @@
 *#
 /public/assets
 
-*.jpg
+.jpg
 
 .DS_Store
