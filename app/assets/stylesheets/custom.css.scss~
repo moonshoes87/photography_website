@@ -45,7 +45,7 @@ body {
   padding: 10px;
   color: gray;
   background: gray;
-  background-image: url("background_images/old_paper.jpg");
+  background-image: url("background_images/red_marble.jpg");
 }
 
 /* PROFILE PAGE */
@@ -211,13 +211,13 @@ body {
   width: 240px; 
   margin-left: 0px;
   margin-top: 0px;
+  margin-bottom: 0px;
   background: black;
   color: gray;
   background: rgba(0, 0, 0, 0.7);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-/*  border: 1px solid white; */
 }
 
 .navigation {
@@ -288,33 +288,28 @@ div#slider {
 
 /* THUMBNAILS */
 
-#centerer {
-  display: inline-block;
-  margin: 0 auto;
-  
-}
 
 ul#thumbnails {
   background: rgba(0, 0, 0, 0.76); 
   list-style: none;
   position: relative;
-/*  float: left; */
-  width: 550px;
-/*  border: 1px dashed white; */
+  width: 600px;
   height: 130px;
   overflow: hidden;
-  border-top: 1px dashed gray;
-  border-bottom: 1px dashed gray;
-  margin: 0 auto;
+/*  margin: 0 auto; */
   padding: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
+
 
 #click-back {
   width: 55px;
   margin-top: 30px;
   position: absolute;
   top: 570px;
-  left: 400px;
+  left: 500px;
   color: black;
 }
 
@@ -330,8 +325,7 @@ ul#thumbnails {
 li.nail {
   float: left;
   margin: 4px 0 4px 0;
-  padding: 4px;
-  border: 1px dashed gray;  
+  padding: 2px;
   height: 110px;
 /*  width: 110px;  */
   overflow: hidden;

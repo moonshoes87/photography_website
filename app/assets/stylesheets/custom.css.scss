@@ -45,7 +45,7 @@ body {
   padding: 10px;
   color: gray;
   background: gray;
-  background-image: url("background_images/old_paper.jpg");
+  background-image: url("background_images/freeimage_5259089.jpg");
 }
 
 /* PROFILE PAGE */
@@ -206,7 +206,7 @@ body {
   position: absolute;
   top: -20px;
   left: -20px;
-  height: 100%;
+  height: 105%;
 /*  height: 500px; */
   width: 240px; 
   margin-left: 0px;
@@ -217,7 +217,6 @@ body {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-/*  border: 1px solid white; */
 }
 
 .navigation {
@@ -288,24 +287,19 @@ div#slider {
 
 /* THUMBNAILS */
 
-#centerer {
-  display: inline-block;
-  margin: 0 auto;
-  
-}
 
 ul#thumbnails {
   background: rgba(0, 0, 0, 0.76); 
   list-style: none;
   position: relative;
   width: 600px;
-/*  border: 1px dashed white; */
   height: 130px;
   overflow: hidden;
-  border-top: 1px dashed gray;
-  border-bottom: 1px dashed gray;
 /*  margin: 0 auto; */
   padding: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 
 
