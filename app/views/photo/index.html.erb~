@@ -2,12 +2,22 @@
   <p>Put a default pretty image here</p>
 </div>
 <div id="slider">
-  <div id="click-back">Click back</div>
-  <ul id="thumbnails">
-    <% @photos.each do |p|  %>
-    <li class="nail"><%= image_tag "#{p.url}", class: "thumb crop portrait" %></li>
-    <% end %>
-  </ul>
-  <div id="click-forward">Click left</div>
-</div>
 
+
+    <ul id="thumbnails" class="border">
+  <div id="centerer">
+      <% @photos.each do |p| %>
+      <% if p.image_type == "landscape" %>
+      <li class="nail"><%= image_tag "#{p.url}", class: "thumb crop" %></li>
+      <% else if p.image_type == "portrait" %>
+      <li class="nail"><%= image_tag "#{p.url}", class: "thumb crop portrait" %></li>
+      <% end %>
+      <% end %>
+    <% end %>
+    </div>
+    </ul>
+
+
+</div>
+  <div id="click-back">Back</div>
+  <div id="click-forward">Forward</div>

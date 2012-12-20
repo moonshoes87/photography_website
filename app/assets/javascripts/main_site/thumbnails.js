@@ -13,3 +13,6 @@ $(document).ready(function(){
 		    $("ul#thumbnails").prepend($("li.nail:gt(" + last_four + ")"));
 	    });
     });
+
+
+
