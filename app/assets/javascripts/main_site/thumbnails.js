@@ -32,7 +32,6 @@ $(document).ready(function(){
 	    for (i=0; i < 5; i++){
 		if ($(photos_shown[i]).hasClass("portrait")){
 		    portraits += 1;
-		    console.log(photos_shown[i]);
 		    console.log("portrait");
 		}
 		else {
@@ -45,11 +44,12 @@ $(document).ready(function(){
 	    figure();
 	    console.log("Portraits:" + portraits + " and Landscapes: " + landscapes);
 	    var landscapes_width = landscapes * 100;
-	    var portraits_width = portraits * 80;
+	    var portraits_width = portraits * 70;
 	    var total_padding = 18;
 	    var how_many_photos = landscapes + portraits;
 	    var total_width = landscapes_width + portraits_width + total_padding;
 	    var necessary_margin = (600 - total_width) / 2;
+	    console.log("Landscapes width: " + landscapes_width + ". Portraits width: " + portraits_width);
 	    console.log("total width: " + total_width);
 	    console.log("necessary margin: " + necessary_margin)
 	    $("#thumbnails li:first-child").css("margin-left", necessary_margin + "px");
