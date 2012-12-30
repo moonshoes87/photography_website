@@ -3,6 +3,7 @@
 var photos_shown = [];
 
 $(document).ready(function(){
+    var last_five = $("li.nail").length - 6;
         landscapes_vs_portraits();
 	$("li.nail:gt(4)").hide();
 	$("li.nail").click(function(){
@@ -10,19 +11,27 @@ $(document).ready(function(){
 		$("#display").html(html).addClass("image");
 	    });
 	$("#click-forward").on("click", function(){
-		$("ul#thumbnails").append($("li.nail:lt(5)"));
-		$("li.nail:lt(5)").show();
-		$("li.nail:gt(5)").hide();
-	        landscapes_vs_portraits();
-		// ADD THIS NEXT.  Maybe use the slide function to 
-	    });
-	$("#click-back").click(function(){
-		var last_five = $("li.nail").length - 5;
-		    $("ul#thumbnails").prepend($("li.nail:gt(" + last_five + ")"));
-	    });
-
-	function landscapes_vs_portraits(){
-	    console.log("landscapes_vs_portraits was called");
+	    $("li.nail").css("margin-left", 0)
+	    $("ul#thumbnails > li").css("margin-left", 0);
+	    $("ul#thumbnails").append($("li.nail:lt(5)"));
+	    $("li.nail:lt(5)").show();
+	    $("li.nail:gt(5)").hide();
+	    landscapes_vs_portraits();
+	    // ADD THIS NEXT.  Maybe use the slide function to 
+	});
+    $("#click-back").click(function(){
+	$("li.nail").css("margin-left", 0);
+//	FIX last_five SO IT SAYS THE RIGHT NUMBER CONSISTENTLY
+//	var last_five = 19;
+	console.log("var: " + last_five);
+	$("ul#thumbnails").prepend($("li.nail:gt(" + last_five + ")"));
+	$("li.nail:lt(5)").show();
+	$("li.nail:gt(4)").hide();
+	landscapes_vs_portraits();
+    });
+    
+      function landscapes_vs_portraits(){
+	console.log("landscapes_vs_portraits was called");
 	    //make this get called so that the landscape and portrait variables get reset each time the clicking happens
 	    var landscapes = 0;
 	    var portraits = 0;
@@ -32,12 +41,9 @@ $(document).ready(function(){
 	    for (i=0; i < 5; i++){
 		if ($(photos_shown[i]).hasClass("portrait")){
 		    portraits += 1;
-		    console.log("portrait");
 		}
 		else {
 		    landscapes += 1;
-		    console.log(photos_shown[i]);
-		    console.log("landscape");
 		}
 	    }
 	}

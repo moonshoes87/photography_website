@@ -308,21 +308,29 @@ ul#thumbnails {
 
 
 #click-back {
+  cursor: default;
   width: 55px;
   margin-top: 30px;
   position: absolute;
   top: 570px;
   left: 500px;
   color: black;
+  &:hover {
+    opacity: .7;
+  }
 }
 
 #click-forward {
+  cursor: default;
   color: black;
   position: absolute;
   width: 55px;
   margin-top: 30px;
   top: 570px;
   right: 200px;
+  &:hover {
+    opacity: .7;
+  }
 }
 
 li.nail {
