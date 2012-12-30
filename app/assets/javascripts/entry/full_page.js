@@ -20,7 +20,7 @@ $(document).ready(function(){
 		start_slideshow();
 		enter_navbar();
 	    });
-	$("#button_holder").click(function(){
+        $("#button_holder").click(function(){
 		start_slideshow();
 		enter_navbar();
 		$('#button_holder').unbind('click');
@@ -68,7 +68,9 @@ function start_slideshow(){
     function do_slideshow(){
 	starting_slideshow = true;
 	$("#bg img." + type_not + ":hidden").remove();
-	$("#color_button, #black_and_white_button").fadeOut(2000);
+	
+	//	$("#bg img." + type + ":first").removeClass("hidden")
+	$("#color_button, #black_and_white_button").fadeOut(2000)
 	$("#bg img.hidden").removeClass("hidden shown").hide();
 	window.setInterval(function(){
 		$("#bg img:first")
@@ -78,23 +80,14 @@ function start_slideshow(){
 		    .end()
 		    .appendTo("#bg");
 	    }, 2800);
-	$("#bg img.shown").fadeOut(3200, function(){
-		$(this).removeClass("hidden").hide();
+	$("#bg img.shown").fadeOut(2800, function(){
+		$("#bg img." + type_not).remove();
 		$("#bg img").removeClass("shown");
 	    });
-	
-	$("#bg img:eq(1)").fadeIn(3200, function(){
-		$("#bg img." + type_not).remove();
-	    });
-	//window.setInterval(function(){
-	//$("#bg img:first")
-	//    .fadeOut(1000)
-	//    .next()
-	//    .fadeIn(1000)
-	//    .end()
-	//    .appendTo("#bg");
-	//  }, 2800);
-	//	starting_slideshow = null;
+// removing this makes it work.  with this in, if the first photo is black and white, it skips this when going from a color starter to black and white.  if the first photo (in the list) is color, it skips this when going from a black and white starter to the color button.  
+//	$("#bg img:eq(1)").fadeIn(3200, function(){
+//	    $("#bg img." + type_not).remove();
+//	});
     }
 }
 
