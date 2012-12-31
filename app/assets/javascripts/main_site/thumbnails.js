@@ -21,8 +21,6 @@ $(document).ready(function(){
 	});
     $("#click-back").click(function(){
 	$("li.nail").css("margin-left", 0);
-//	FIX last_five SO IT SAYS THE RIGHT NUMBER CONSISTENTLY
-//	var last_five = 19;
 	console.log("var: " + last_five);
 	$("ul#thumbnails").prepend($("li.nail:gt(" + last_five + ")"));
 	$("li.nail:lt(5)").show();

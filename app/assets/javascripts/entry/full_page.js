@@ -68,11 +68,10 @@ function start_slideshow(){
     function do_slideshow(){
 	starting_slideshow = true;
 	$("#bg img." + type_not + ":hidden").remove();
-	
-	//	$("#bg img." + type + ":first").removeClass("hidden")
 	$("#color_button, #black_and_white_button").fadeOut(2000)
 	$("#bg img.hidden").removeClass("hidden shown").hide();
 	window.setInterval(function(){
+	    // :first
 		$("#bg img:first")
 		    .fadeOut(1000)
 		    .next()
