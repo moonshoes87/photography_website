@@ -15,7 +15,7 @@ $(document).ready(function(){
 	    $("ul#thumbnails > li").css("margin-left", 0);
 	    $("ul#thumbnails").append($("li.nail:lt(5)"));
 	    $("li.nail:lt(5)").show();
-	    $("li.nail:gt(5)").hide();
+	    $("li.nail:gt(4)").hide();
 	    landscapes_vs_portraits();
 	    // ADD THIS NEXT.  Maybe use the slide function to 
 	});
