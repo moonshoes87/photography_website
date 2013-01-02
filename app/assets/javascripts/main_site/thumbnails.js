@@ -9,6 +9,8 @@ $(document).ready(function(){
 	$("li.nail").click(function(){
 		var html = $(this).html();
 		$("#display").html(html).addClass("image");
+	    // this removes the screen
+	        $("#display").css('background', 'none');
 	    });
 	$("#click-forward").on("click", function(){
 	    $("li.nail").css("margin-left", 0)
