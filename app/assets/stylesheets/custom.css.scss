@@ -147,6 +147,10 @@ body {
   width: 70px;
   text-align: left;
   left: 1px;
+  cursor: default;
+  &:hover {
+    opacity: .7;
+  } 
 }
 
 
@@ -157,6 +161,10 @@ body {
   bottom: 10px;
   right: 1px;
   width: 100px;
+  cursor: default; 
+  &:hover {
+    opacity: .7;
+  }
 }
 
 .hidden {
@@ -181,7 +189,7 @@ body {
   display: none;
   position: absolute;
   top: 150px;
-  left: 162px;
+  left: 190px;
   height: 300px;
   width: 200px;
   z-index: 2;
@@ -196,7 +204,7 @@ body {
   
 .drop .navigation {
   height: 250px;
-  width: 150px;
+  width: 140px;
 }
 
 
@@ -208,7 +216,7 @@ body {
   left: -20px;
   height: 105%;
 /*  height: 500px; */
-  width: 240px; 
+  width: 210px; 
   margin-left: 0px;
   margin-top: 0px;
   background: black;
@@ -256,13 +264,13 @@ ul.nav {
 
 
 #photographs {
-  width: 130px;
+  width: 250px;
 }
 
 /* SLIDER DISPLAY AREA */
 
 #display {
-  background: rgba(0, 0, 0, 0.76); 
+ /* background: rgba(0, 0, 0, 0.76); */
   width: 600px;
   height: 400px;
   float: right;
@@ -327,7 +335,7 @@ ul#thumbnails {
   width: 55px;
   margin-top: 30px;
   top: 570px;
-  right: 200px;
+  right: 180px;
   &:hover {
     opacity: .7;
   }

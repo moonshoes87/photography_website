@@ -7,6 +7,8 @@ class PhotoController < ApplicationController
 
   def index
   @photos = Photo.all rescue []
+#  @black_and_white_photos = Photo.black_and_white
+ # @food_photos = Tag.find_by_name("Kitchen and food")
   end
 
   def new
@@ -31,11 +33,13 @@ class PhotoController < ApplicationController
   end
 
   def kitchen_and_food
-  @photos = Tag.find_by_id(5).photos
+  @photos = Tag.find_by_name("Kitchen and food").photos
+  render :index
   end
 
   def black_and_white
   @photos = Photo.black_and_white
+  render :index
   end
 
 end
