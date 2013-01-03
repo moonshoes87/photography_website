@@ -33,6 +33,9 @@ p {
   width: 800px;
   position: relative;
   left: 150px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 
 
@@ -254,6 +257,9 @@ ul.nav {
     text-decoration: none;
     color: gray;
   } 
+  &:hover {
+    opacity: .7;
+  }
 }
 
 #erik {
