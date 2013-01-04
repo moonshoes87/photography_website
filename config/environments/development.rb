@@ -46,7 +46,7 @@ PhotographyWebsite::Application.configure do
   address:              'smtp.gmail.com',
   port:                 587,
   domain:               'baci.lindsaar.net',
-  user_name:            'mintblue87',
+    user_name:            'mintblue87@gmail.com',
   password:             'gazpacho,0',
   authentication:       'plain',
     enable_starttls_auto: true  }
