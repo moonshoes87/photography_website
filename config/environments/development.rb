@@ -36,9 +36,19 @@ PhotographyWebsite::Application.configure do
   config.assets.debug = true
 
   # LORI TRYING TO MAKE THE MAILS GO
-
-  config.action_mailer.delivery_method = :sendmail
+#  config.action_mailer.delivery_method = :sendmail
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true  
+
+  #NEW ATTEMPT AT MAILS
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  address:              'smtp.gmail.com',
+  port:                 587,
+  domain:               'baci.lindsaar.net',
+  user_name:            'mintblue87',
+  password:             'gazpacho,0',
+  authentication:       'plain',
+    enable_starttls_auto: true  }
 
 end

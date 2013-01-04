@@ -70,10 +70,19 @@ PhotographyWebsite::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
- # LORI TRYING TO MAKE THE MAILS GO                                                                          
-
-  config.action_mailer.delivery_method = :sendmail
+ # LORI TRYING TO MAKE THE MAILS GO                                                         
+                 
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
 
+  #NEW ATTEMPT AT MAILS                                                                      
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  address:              'smtp.gmail.com',
+  port:                 587,
+  domain:               'baci.lindsaar.net',
+  user_name:            'mintblue87',
+  password:             'gazpacho,0',
+  authentication:       'plain',
+    enable_starttls_auto: true  }
 end
